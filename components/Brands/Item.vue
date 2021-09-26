@@ -4,16 +4,17 @@
     @mouseover="isHover = true"
     @mouseleave="isHover = false"
   >
-    <b-img
+    <b-img-lazy
       v-if="!isHover"
       src="/images/452693_bae88af79c.jpeg"
       alt=""
       width="380"
       fluid
+      lazy
     />
 
     <div v-if="isHover" class="lists__hover">
-      <b-img class="mb-2" :src="item.logo" width="100" />
+      <b-img-lazy class="mb-2" :src="item.logo" width="100" />
 
       <p class="text-center">{{ item.description }}</p>
 

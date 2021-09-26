@@ -2,7 +2,7 @@
 <div>
   <aside :class="{ menus: true, 'menus--active': isActive }">
     <div class="menus__logo">
-      <b-img
+      <b-img-lazy
         v-if="!isActive"
         v-bind="logoProps"
         src="/images/logo.png"
@@ -53,11 +53,11 @@
     :class="{
       menus__container: true,
       fadeIn: isActive,
-      fadeOut: !isActive
+      fadeOut: false
     }"
   >
     <div class="menus__header">
-      <b-img src="/images/full_logo.png" />
+      <b-img-lazy src="/images/full_logo.png" />
     </div>
 
     <div class="menus__content">
@@ -112,25 +112,31 @@ export default {
   100%
     left: -350px
 
-.fadeIn
-  display: flex
-  animation: fadeIn 2s
-  left: 75px
+// .fadeIn
+//   display: flex
+//   animation: fadeIn 2s
+//   left: 75px
 
-.fadeOut
+.menus__container.fadeOut
   // display: none
-  animation: fadeOut 2s
+  animation: fadeOut 1.5s
   left: -350px
+
+.menus__container.fadeIn
+  left: 75px
+  animation: fadeIn 1.5s
 
 .menus__container
   width: 350px
   height: 100vh
   position: absolute
   top: 0
+  // left:
+  left: -350px
   // left: 75px
   // left: -350px
   // display: none
-  // display: flex
+  display: flex
   flex-direction: column
   border-right: 1px solid #A3A3A32E
   z-index: 9999

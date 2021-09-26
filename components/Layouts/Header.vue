@@ -20,12 +20,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav w-100 justify-content-center">
         <li class="nav-item active">
-          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
           <a href="javascript:;" class="nav-link">
-            <b-img src="/images/full_logo.png" fluid-grow />
+            <b-img-lazy src="/images/full_logo.png" fluid-grow />
           </a>
         </li>
       </ul>

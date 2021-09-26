@@ -3,7 +3,7 @@
     <div class="footer__contaienr">
       <b-row>
         <b-col cols="3">
-          <h1 class="text-white text-sm">CALL CENTER</h1>
+          <h4 class="text-white text-sm">CALL CENTER</h4>
           <p class="text-white">+66-2645-1313</p>
           <p class="text-white">info.rojukiss.co.th</p>
         </b-col>
@@ -11,29 +11,29 @@
         <b-col cols="9">
           <b-row>
             <b-col cols="3" class="text-white">
-              <h6>About</h6>
+              <h6 class="text-white opacity-60">About</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>Brands</h6>
+              <h6 class="text-white opacity-60">Brands</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>Sustainnabilty</h6>
+              <h6 class="text-white opacity-60">Sustainnabilty</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>Corperate Governance</h6>
+              <h6 class="text-white opacity-60">Corperate Governance</h6>
             </b-col>
 
             <b-col cols="3" class="text-white">
-              <h6>Investor Relations</h6>
+              <h6 class="text-white opacity-60">Investor Relations</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>News & Media</h6>
+              <h6 class="text-white opacity-60">News & Media</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>Careers</h6>
+              <h6 class="text-white opacity-60">Careers</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6>Contact Us</h6>
+              <h6 class="text-white opacity-60">Contact Us</h6>
             </b-col>
           </b-row>
         </b-col>
@@ -41,24 +41,33 @@
 
       <b-row align-v="end" class="justify-content-between">
         <b-col cols="12" class="text-right">
-          Follow US
-          <span>
+          <span class="text-white mr-4">Follow US</span>
+
+          <span class="mr-4">
             <i class="fa fa-instagram fa-lg text-white"></i>
           </span>
 
-          <span>
+          <span class="mr-4">
             <i class="fa fa-facebook fa-lg text-white"></i>
           </span>
         </b-col>
 
         <b-col cols="12">
-          <hr />
+          <hr class="text-white bg-white opacity-60" />
         </b-col>
 
         <b-col cols="12">
-          © Copyright 2019 All rights reserved. rojukiss.co.th
-          Privacy Policy
-          Sitemap
+          <div class="row">
+            <b-col>
+              <span class="text-white opacity-50">
+                © Copyright 2019 All Rights Reserved. Rojukiss.Co.Th
+              </span>
+            </b-col>
+            <b-col class="text-white text-right">
+              <span class="text-white opacity-50 mr-4">Privacy Policy</span>
+              <span class="text-white opacity-50 mr-4">Sitemap</span>
+            </b-col>
+          </div>
         </b-col>
       </b-row>
     </div>
@@ -78,4 +87,13 @@ footer
   height: 100%
   padding: 2rem 6rem
   background-color: #47484A
+
+.opacity-50
+  opacity: 50%
+
+.opacity-60
+  opacity: 60%
+
+h6
+  font-weight: 300
 </style>

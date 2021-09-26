@@ -1,55 +1,57 @@
 <template>
   <div class="banners">
-    <div class="banners__align">
-      <figure class="pa-4">
-        <b-img
-          class="w-100 h-100"
-          src="/images/shutterstock_314852606.png"
-          width="540"
-        />
-      </figure>
+    <div :class="{ banners__align: true, 'banners__align--logo': true }">
+      <div
+        :class="{ banners__items: true }"
+      >
+        <Item :items="items" :index="0" />
+      </div>
+
+      <RightArrowButtom :on-click="nextItems" />
     </div>
-    <div class="banners__align">
-      <div class="block">
-        <div class="block__items">
-          <div class="row justify-content-center align-items-center w-100 h-100">
-            <h1>Leading In Asia Beauty</h1>
+
+    <div :class="{ banners__align: true, 'banners__align--column': true }">
+      <div :class="{ banners__items: true, 'banners__items--hd': true }">
+        <div class="row justify-content-center align-items-center w-100 h-100">
+            <h1>{{ items.at(0).title }}</h1>
           </div>
-        </div>
-        <div class="block__items">
-          <figure class="pa-4">
-            1
-            <!-- <b-img
-              class="w-100 h-100"
-              src="/images/shutterstock_314852606.png"
-              width="120"
-            /> -->
-          </figure>
-        </div>
-        <div class="block__items">
-          <figure class="pa-4">
-            2
-            <!-- <b-img
-              class="w-100 h-100"
-              src="/images/shutterstock_314852606.png"
-              width="120"
-            /> -->
-          </figure>
-        </div>
+      </div>
+
+      <div :class="{ banners__items: true, banners__bg: false }">
+        <Item :items="items" :index="1" />
+      </div>
+
+      <div :class="{ banners__items: true, banners__bg: false }">
+        <Item :items="items" :index="2" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Item from '~/components/Elements/Image'
+import RightArrowButtom from '~/components/Elements/Buttom/RightArrow'
+
 export default {
+  components: {
+    Item,
+    RightArrowButtom
+  },
+
   data() {
     return {
       items: [
-        { title: '/images/shutterstock_314852606.png', src: 'Leading In Asia Beauty' },
-        { title: '/images/shutterstock_314852606.png', src: 'Professional Team cosmetic' },
-        { title: '/images/shutterstock_314852606.png', src: 'Better Making The Best' },
+        { id: 1, title: 'Leading In Asia Beauty', src: '/images/shutterstock_1331485058.jpg' },
+        { id: 2, title: 'Professional Team cosmetic', src: '/images/shutterstock_410125207.jpg' },
+        { id: 3, title: 'Better Making The Best', src: '/images/shutterstock_641593066.jpg' },
       ]
+    }
+  },
+
+  methods: {
+    nextItems() {
+      const shift = this.items.shift()
+      this.items.push(shift)
     }
   }
 }
@@ -61,25 +63,32 @@ export default {
   height: 100%
   max-height: calc(100% - 80px) !important
   display: flex
-  // align-items: stretch
+  flex-direction: row
+  position: relative
+  align-items: stretch
 
-  .banners__align
-    flex-basis: 50%
-
-    .block
+  .banners__align--logo
+    .banners__items
       width: 100%
       height: 100%
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      justify-content: flex-start
+      flex-basis: 50%
 
-      .block__items
-        flex-basis: 50%
-        // height: 100%
-        border: 1px solid red
+  .banners__align--column
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
 
-      .block__items:first-child
-        // height: 60%
-        flex-basis: 100%
+    .banners__items
+      height: 40%
+      flex-basis: 50%
+
+    .banners__items--hd
+      height: 60%
+      flex-basis: 100%
+
+  .banners__align
+    height: 80%
+    flex-basis: 50%
+    position: relative
 </style>

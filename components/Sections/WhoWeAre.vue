@@ -20,7 +20,7 @@
 
       <b-col class="h-100">
         <figure class="w-100 h-100 pa-4">
-          <b-img
+          <b-img-lazy
             class="w-100 h-100"
             src="/images/shutterstock_314852606.png"
             width="540"
