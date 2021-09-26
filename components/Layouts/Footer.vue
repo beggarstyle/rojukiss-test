@@ -11,29 +11,29 @@
         <b-col cols="9">
           <b-row>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">About</h6>
+              <h6 class="text-white">About</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Brands</h6>
+              <h6 class="text-white">Brands</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Sustainnabilty</h6>
+              <h6 class="text-white">Sustainnabilty</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Corperate Governance</h6>
+              <h6 class="text-white">Corperate Governance</h6>
             </b-col>
 
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Investor Relations</h6>
+              <h6 class="text-white">Investor Relations</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">News & Media</h6>
+              <h6 class="text-white">News & Media</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Careers</h6>
+              <h6 class="text-white">Careers</h6>
             </b-col>
             <b-col cols="3" class="text-white">
-              <h6 class="text-white opacity-60">Contact Us</h6>
+              <h6 class="text-white">Contact Us</h6>
             </b-col>
           </b-row>
         </b-col>
@@ -91,9 +91,9 @@ footer
 .opacity-50
   opacity: 50%
 
-.opacity-60
+hr
   opacity: 60%
-
 h6
+  opacity: 60%
   font-weight: 300
 </style>
